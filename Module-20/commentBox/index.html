@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment-Box</title>
+</head>
+
+<body>
+
+    <section>
+        <h1 id="text">Create Comment Box With JavaScript Functionality Added</h1>
+        <div id="comment_arrea" style="border:2px solid blue ">
+            <h1><u>Text Add from Comment Box</u> </h1>
+
+        </div>
+        <div>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sequi provident consequatur? Autem
+                minus perspiciatis ratione, vero dolorum, similique unde sint mollitia quod voluptate odit dicta, porro
+                fugit ex quis!</P>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sequi provident consequatur? Autem
+                minus perspiciatis ratione, vero dolorum, similique unde sint mollitia quod voluptate odit dicta, porro
+                fugit ex quis!</P>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sequi provident consequatur? Autem
+                minus perspiciatis ratione, vero dolorum, similique unde sint mollitia quod voluptate odit dicta, porro
+                fugit ex quis!</P>
+
+            <textarea id="text-area" cols="160" rows="10"></textarea>
+
+        </div>
+        <button class ="eventArea">Add-textComment-area</button>
+
+
+    </section>
+
+</body>
+<script>
+// event handlear create 
+
+    document.querySelector('.eventArea').addEventListener('click', function(){
+
+        // text area .. 
+        document.body.style.backgroundColor='yellow'
+
+        // text area make identify with code 
+        const textArea = document.getElementById('text-area'); 
+
+        // input text convert to as a Value 
+        const inputText = textArea.value; 
+        
+
+        // selection Witch are new Input text make Setup
+        const areaComment = document.getElementById('comment_arrea')
+
+        // Create P tag inside the Selection Area 
+        const p = document.createElement('p')
+
+        // Select the p tag and make push text ; 
+
+        p.innerText = inputText ; 
+
+        // append the 'p ' tag to Selected area 
+        areaComment.appendChild(p);
+
+
+        // make Value null 
+        textArea.value=""; 
+
+
+
+    });
+
+    const textColor = document.getElementById('text'); 
+
+    textColor.style.color="blue"
+
+</script>
+
+</html>

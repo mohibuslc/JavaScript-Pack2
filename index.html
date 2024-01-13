@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="text-deleted">Comment Deleted </h1>
+    <input type="text" id="text-input" placeholder="Deleted" />
+    <button id="btn-button" disabled >Deleted</button>
+    
+</body>
+<script >
+
+document.getElementById('text-input').addEventListener('keyup' ,  function(e){
+
+    const text = e.target.value ; 
+
+    const button = document.getElementById('btn-button')
+
+    if(text ==='deleted'){
+
+        button.removeAttribute('disabled')
+    }else{
+
+        button.setAttribute('disabled' , true )
+    }
+})
+
+    document.getElementById('btn-button').addEventListener('click', function(){
+
+        const text = document.getElementById('text-deleted');
+
+        text.style.display ='none'
+    })
+
+</script>
+</html>
