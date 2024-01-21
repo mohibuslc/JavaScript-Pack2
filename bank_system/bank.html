@@ -18,19 +18,48 @@
         <div class="bg-lime-800 text-white p-8" >
 
             <h1>Deposit</h1>
-            <h3>$00</h3>
+            <h3>$<span id="current-deposit">00</span></h3>
         </div>
         <div class="bg-yellow-800 text-white p-8">
-            <h1>Deposit</h1>
-            <h3>$500</h3>
+            <h1>Withdraw</h1>
+            <h3>$<span id="amountWithdraw">00</span></h3>
+           
 
         </div>
         <div class="bg-orange-900 text-white p-8">
-            <h1>Deposit</h1>
-            <h3>$1245</h3>
+            <h1>Balance</h1>
+            <h3>$<span id="balanceUser">1245</span></h3>
         </div>
     </div>
     </section>
+ <!-- --- Depost and Withdraw Section ---- -->
+
+    <section class="mt-12">
+        <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto">
+            <div class="bg-lime-800  p-8" >
+    
+                <h1 class="text-white">Please Do Deposit</h1>
+               
+                <input class=" block mb-[5px] w-9/12" type="text" id="user-deposit" placeholder="Amount Enter To deposit" />
+                <button class="bg-blue-600 mt-10 px-5 p-3  " id="btnDeposit" style="color:red;">Deposit</button>
+
+            </div>
+            <div class="bg-yellow-800  p-8">
+                <h1 class="text-white">Please input Withdraw Amount</h1>
+                <input class=" block mb-[5px] w-9/12" type="text" id="userDeposit" placeholder="$ Amount make Withdrw" />
+                <button class="bg-blue-600 mt-10 px-5 p-3 ounded-md " id="btnAction" style="color:red">Withdraw</button>
+    
+            </div>
+           
+        </div>
+
+        
+    </section>
+
+
 </main>
+
 </body>
+<script src="bank.js"></script>
+<script src="windraw.js"></script>
 </html>
